@@ -1,3 +1,7 @@
+proc win {} {
+    start_gui
+    gui_show_window -window [gui_get_current_window]
+}
 proc selectInst {args} {
     puts $args
     change_selection [get_cells $args ] -add
