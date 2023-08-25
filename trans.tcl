@@ -3,6 +3,11 @@ proc selectInst {args} {
     change_selection [get_cells $args ] -add
 }
 
+proc selectInstByCellName {args} {
+    puts $args
+    change_selection [get_cells -hi -fi "ref_name =~ $args" ]
+}
+
 proc selectInsts {args} {
     puts $args
     change_selection [get_cells -hi -fi "full_name =~ $args" ] -add
